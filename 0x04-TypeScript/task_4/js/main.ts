@@ -7,12 +7,12 @@
 import Subjects = Subjects;
 
 // Export constants for subjects
-export const cpp = new Subjects.Cpp();
-export const java = new Subjects.Java();
-export const react = new Subjects.React();
+export const cpp = new Cpp();
+export const java = new Java();
+export const react = new React();
 
 // Export Teacher object
-export const cTeacher: Subjects.Teacher = {
+export const cTeacher: Teacher = {
   firstName: "Guillaume",
   lastName: "Salva",
   experienceTeachingC: 10,
