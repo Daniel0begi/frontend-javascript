@@ -4,7 +4,7 @@ interface MajorCredits {
 }
 
 interface MinorCredits {
-  credits: number
+  credits: number;
   brand?: "MinorCredits";
 }
 
