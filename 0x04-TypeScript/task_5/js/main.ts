@@ -1,37 +1,27 @@
-/// <reference path="./subjects/Teacher.ts" />
-/// <reference path="./subjects/Subject.ts" />
-/// <reference path="./subjects/Cpp.ts" />
-/// <reference path="./subjects/Java.ts" />
-/// <reference path="./subjects/React.ts" />
+interface MajorCredits {
+  credits: number;
+  brand?: "MajorCredits";
+}
 
-import Subjects = Subjects;
+interface MinorCredits {
+  credits: number;
+  brand?: "MinorCredits";
+}
 
-// Export constants for subjects
-export const cpp = new Cpp();
-export const java = new Java();
-export const react = new React();
+function sumMajorCredits(
+  subject1: MajorCredits,
+  subject2: MajorCredits,
+): MajorCredits {
+  return {
+    credits: subject1.credits + subject2.credits,
+  };
+}
 
-// Export Teacher object
-export const cTeacher: Teacher = {
-  firstName: "Guillaume",
-  lastName: "Salva",
-  experienceTeachingC: 10,
-};
-
-// ----- Cpp -----
-console.log("C++");
-cpp.setTeacher(cTeacher);
-console.log(cpp.getRequirements());
-console.log(cpp.getAvailableTeacher());
-
-// ----- Java -----
-console.log("Java");
-java.setTeacher(cTeacher);
-console.log(java.getRequirements());
-console.log(java.getAvailableTeacher());
-
-// ----- React -----
-console.log("React");
-react.setTeacher(cTeacher);
-console.log(react.getRequirements());
-console.log(react.getAvailableTeacher());
+function sumMinorCredits(
+  subject1: MinorCredits,
+  subject2: MinorCredits,
+): MinorCredits {
+  return {
+    credits: subject1.credits + subject2.credits,
+  };
+}
