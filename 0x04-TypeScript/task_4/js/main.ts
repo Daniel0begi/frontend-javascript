@@ -1,16 +1,16 @@
 // Interfaces with branding
-export interface MajorCredits {
+interface MajorCredits {
   credits: number;
   readonly __brand: "MajorCredits";
 }
 
-export interface MinorCredits {
+interface MinorCredits {
   credits: number;
   readonly __brand: "MinorCredits";
 }
 
 // Functions
-export function sumMajorCredits(
+function sumMajorCredits(
   subject1: MajorCredits,
   subject2: MajorCredits,
 ): MajorCredits {
@@ -20,7 +20,7 @@ export function sumMajorCredits(
   };
 }
 
-export function sumMinorCredits(
+function sumMinorCredits(
   subject1: MinorCredits,
   subject2: MinorCredits,
 ): MinorCredits {
