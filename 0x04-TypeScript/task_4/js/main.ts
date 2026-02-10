@@ -1,11 +1,11 @@
 // Interfaces with branding
 interface MajorCredits {
-  credits: number;
+  credits: number
   readonly __brand: "MajorCredits";
 }
 
 interface MinorCredits {
-  credits: number;
+  credits: number
   readonly __brand: "MinorCredits";
 }
 
