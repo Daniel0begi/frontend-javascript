@@ -1,22 +1,19 @@
-// Interfaces with branding
 interface MajorCredits {
   credits: number
-  readonly __brand: "MajorCredits";
+  brand?: "MajorCredits";
 }
 
 interface MinorCredits {
   credits: number
-  readonly __brand: "MinorCredits";
+  brand?: "MinorCredits";
 }
 
-// Functions
 function sumMajorCredits(
   subject1: MajorCredits,
   subject2: MajorCredits,
 ): MajorCredits {
   return {
-    credits: subject1.credits + subject2.credits,
-    __brand: "MajorCredits",
+    credits: subject1.credits + subject2.credits
   };
 }
 
@@ -25,7 +22,6 @@ function sumMinorCredits(
   subject2: MinorCredits,
 ): MinorCredits {
   return {
-    credits: subject1.credits + subject2.credits,
-    __brand: "MinorCredits",
+    credits: subject1.credits + subject2.credits
   };
 }
